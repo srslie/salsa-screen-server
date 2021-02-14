@@ -13,7 +13,7 @@ app.listen(app.set('port'), () => {
 })
 
 app.locals.movies = movieData
-app.locals.moviedetails = movieDetails
+app.locals.moviedetails = movieDetailsherok
 app.locals.movieVideos = movieVideos
 
 app.get('/api/v1/movies', (request, response) => {
