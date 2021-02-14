@@ -1,7 +1,7 @@
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const movieData = require('./data/ratingData.js')
+const ratingData = require('./data/ratingData.js')
 
 app.use(cors());
 app.use(express.json())
