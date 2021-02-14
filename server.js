@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const movieData = require('./data/movieData.js')
@@ -5,9 +6,8 @@ const movieData = require('./data/movieData.js')
 // const movieDetails = require('./data/movieDetails.js')
 // const movieVideos = require('./data/movieVideos.js')
 
-
+app.use(cors());
 app.use(express.json())
-app.set('port', 3001);
 
 app.listen(app.set('port', process.env.PORT || 3001), () => {
   console.log(`Now listening on port http://localhost:${app.get('port')}!`)

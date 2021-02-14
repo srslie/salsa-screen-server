@@ -4,7 +4,7 @@
   "description": "",
   "engines": {
     "node": "12.11.1"
-    },
+  },
   "main": "movieData.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/srslie/salsa-screen-server#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }
