@@ -2,6 +2,9 @@
   "name": "salsa-screen-server",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.11.1"
+    },
   "main": "movieData.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
