@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const movieData = require('./data/movieData.js')
-const movie = require('./data/movieData.js')
+// const movie = require('./data/movieData.js')
 const movieDetails = require('./data/movieDetails.js')
 const movieVideos = require('./data/movieVideos.js')
 
