@@ -37,23 +37,22 @@ app.get('/api/v1/users/:userId/ratings', (request, response) => {
 })
 
 
-app.post('/api/v1/:userId/ratings', (request, response) => {
-  const body = request.body;
-  const id = Date.now()
+// app.post('/api/v1/:userId/ratings', (request, response) => {
+//   const body = request.body;
+//   const id = Date.now()
   
-  for (let requiredParameter of ['movie_id', 'rating']) {
-    id (!sighting[requiredParameter]) {
-      response.status(422).json({
-        error: `Request body is missing a required parameter of ${requiredParameter}. Required format is { movie_id: <Integer>, rating: <Integer between 1 and 10> }`
-      })
-    }
-  } else {
-    app.locals.sightings.push({..sighting, id})
-    response.status(201).json({...sighting, id})
-  }
+//   for (let requiredParameter of ['movie_id', 'rating']) {
+//     if (!sighting[requiredParameter]) {
+//       response.status(422).json({
+//         error: `Request body is missing a required parameter of ${requiredParameter}. Required format is { movie_id: <Integer>, rating: <Integer between 1 and 10> }`
+//       })
+//     } else {
+//     app.locals.sightings.push({..sighting, id})
+//     response.status(201).json({...sighting, id})
+//   }
 
-})
+// })
 
-app.delete('/api/v1//users/:user_id/ratings/:rating_id', (request, response) => {
-  response.status(204)
-})
+// app.delete('/api/v1//users/:user_id/ratings/:rating_id', (request, response) => {
+//   response.status(204)
+// })
