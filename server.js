@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const movieData = require('./data/movieData.js')
 // const movie = require('./data/movieData.js')
-const movieDetails = require('./data/movieDetails.js')
-const movieVideos = require('./data/movieVideos.js')
+// const movieDetails = require('./data/movieDetails.js')
+// const movieVideos = require('./data/movieVideos.js')
 
 
 app.use(express.json())
@@ -14,28 +14,28 @@ app.listen(app.set('port', process.env.PORT || 3001), () => {
 })
 
 app.locals.movies = movieData
-app.locals.moviedetails = movieDetailsherok
-app.locals.movieVideos = movieVideos
+// app.locals.moviedetails = movieDetailsherok
+// app.locals.movieVideos = movieVideos
 
 app.get('/api/v1/movies', (request, response) => {
   response.status(200).json(app.locals.movies)
 })
 
-app.get('/api/v1/movies/:id', (request, response) => {
+// app.get('/api/v1/movies/:id', (request, response) => {
 
-  const reqId = request.params.id
-  const foundMovieDetails = app.locals.movieDetails[reqId] ? app.locals.movieDetails[reqId] : null
+//   const reqId = request.params.id
+//   const foundMovieDetails = app.locals.movieDetails[reqId] ? app.locals.movieDetails[reqId] : null
 
-  if (foundMovieDetails) {
-    response.status(200).json(app.locals.moviesDetails[reqId])
-  } else {
-    response.status(404).json({error: `No movie with an id of ${reqId} was found!`})
-  }
-})
+//   if (foundMovieDetails) {
+//     response.status(200).json(app.locals.moviesDetails[reqId])
+//   } else {
+//     response.status(404).json({error: `No movie with an id of ${reqId} was found!`})
+//   }
+// })
 
-app.get('/api/v1/users/:userId/ratings', (request, response) => {
-  response.status(200).json(app.locals.ratings)
-})
+// app.get('/api/v1/users/:userId/ratings', (request, response) => {
+//   response.status(200).json(app.locals.ratings)
+// })
 
 
 // app.post('/api/v1/:userId/ratings', (request, response) => {
